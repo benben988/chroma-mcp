@@ -361,7 +361,7 @@ async def chroma_add_documents(
 
     client = get_chroma_client()
     try:
-        collection = client.get_or_create_collection(collection_name)
+        collection = client.get_collection(collection_name)
         
         # Check for duplicate IDs
         existing_ids = collection.get(include=[])["ids"]
